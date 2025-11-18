@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT;
 const allowedOrigins = [
     "http://localhost:5173",//for development
-    "https://starlit-stationary-frontend.vercel.app"
+    "https://wedding-Invite-jamila.vercel.app"
 ]
 
 app.use(cookieParser())
