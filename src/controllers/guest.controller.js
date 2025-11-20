@@ -58,12 +58,8 @@ export const showSpecificGuest=async(req,res)=>{
 export const addConfirmedGuest=async(req,res)=>{
     try {
         const {id,confirmedInvites} = req.body
-        console.log(id)
         if(!id){
             return res.status(400).json({message:"guest id is required"})
-        }
-        if(!confirmedInvites){
-            return res.status(400).json({message:"confirmed invite is required id is required"})
         }
         const updateGuest = await Guest.findByIdAndUpdate(id,{confirmed:true,confirmedInvites})
         if(!updateGuest){
